@@ -151,3 +151,9 @@ const me: isPerson = {
     return dollars;
   }
 }
+
+const greetPerson = (person: isPerson) => {
+  console.log(`Hello ${person.name}`)
+}
+
+greetPerson(me)
