@@ -1,3 +1,5 @@
+import { Invoice } from "./classes/invoice.js";
+
 const anchor = document.querySelector('a')!;
 
 console.log(anchor.href)
