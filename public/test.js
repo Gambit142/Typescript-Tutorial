@@ -91,3 +91,7 @@ const me = {
         return dollars;
     }
 };
+const greetPerson = (person) => {
+    console.log(`Hello ${person.name}`);
+};
+greetPerson(me);
