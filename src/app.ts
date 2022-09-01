@@ -1,6 +1,10 @@
 import { Invoice } from "./classes/invoice.js";
+import { ListTemplate } from "./classes/ListTemplate.js";
 import { Payment } from "./classes/payment.js";
 import { HasFormatter } from "./interfaces/HasFormatter.js";
+
+const ul = document.querySelector('ul')!
+const listTemplate = new ListTemplate(ul)
 
 let docOne: HasFormatter
 let docTwo: HasFormatter
@@ -31,7 +35,6 @@ form.addEventListener('submit', (e) => {
     doc = new Payment(toFrom.value, details.value, amount.valueAsNumber)
   }
 
-  console.log(doc)
-
+  listTemplate.render(doc, type.value, 'start')
 })
 
