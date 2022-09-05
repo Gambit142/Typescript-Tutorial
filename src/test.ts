@@ -157,3 +157,33 @@ const greetPerson = (person: isPerson) => {
 }
 
 greetPerson(me)
+
+
+// Generics
+const addUID = <T extends object>(object: T) => {
+  let uid = Math.floor(Math.random() * 1000)
+  return {...object, uid: uid}
+}
+
+let docOne = addUID({name: 'Francis', age: 33})
+
+console.log(docOne)
+
+// Generics with interfaces
+interface Resource<T> {
+  uid: number;
+  resourceName: string;
+  data: T
+}
+
+const docThree: Resource<object> = {
+  uid: 300,
+  resourceName: 'Francis',
+  data: {game: 'nintendo'}
+}
+
+const docFour: Resource<string[]> = {
+  uid: 300,
+  resourceName: 'Francis',
+  data: ['Chelsea', 'Liverpool', 'Bayern']
+}

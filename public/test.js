@@ -95,3 +95,20 @@ const greetPerson = (person) => {
     console.log(`Hello ${person.name}`);
 };
 greetPerson(me);
+// Generics
+const addUID = (object) => {
+    let uid = Math.floor(Math.random() * 1000);
+    return Object.assign(Object.assign({}, object), { uid: uid });
+};
+let docOne = addUID({ name: 'Francis', age: 33 });
+console.log(docOne);
+const docThree = {
+    uid: 300,
+    resourceName: 'Francis',
+    data: { game: 'nintendo' }
+};
+const docFour = {
+    uid: 300,
+    resourceName: 'Francis',
+    data: ['Chelsea', 'Liverpool', 'Bayern']
+};
