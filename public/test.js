@@ -102,13 +102,22 @@ const addUID = (object) => {
 };
 let docOne = addUID({ name: 'Francis', age: 33 });
 console.log(docOne);
+// Enums
+var RESOURCETYPE;
+(function (RESOURCETYPE) {
+    RESOURCETYPE[RESOURCETYPE["BOOK"] = 0] = "BOOK";
+    RESOURCETYPE[RESOURCETYPE["PERSON"] = 1] = "PERSON";
+    RESOURCETYPE[RESOURCETYPE["CLUBS"] = 2] = "CLUBS";
+})(RESOURCETYPE || (RESOURCETYPE = {}));
 const docThree = {
     uid: 300,
-    resourceName: 'Francis',
+    resourceName: 'person',
+    resourceType: RESOURCETYPE.PERSON,
     data: { game: 'nintendo' }
 };
 const docFour = {
     uid: 300,
-    resourceName: 'Francis',
+    resourceName: 'clubs',
+    resourceType: RESOURCETYPE.CLUBS,
     data: ['Chelsea', 'Liverpool', 'Bayern']
 };

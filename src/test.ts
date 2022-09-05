@@ -169,21 +169,27 @@ let docOne = addUID({name: 'Francis', age: 33})
 
 console.log(docOne)
 
+// Enums
+enum RESOURCETYPE {BOOK, PERSON, CLUBS }
+
 // Generics with interfaces
 interface Resource<T> {
   uid: number;
   resourceName: string;
+  resourceType: RESOURCETYPE;
   data: T
 }
 
 const docThree: Resource<object> = {
   uid: 300,
-  resourceName: 'Francis',
+  resourceName: 'person',
+  resourceType: RESOURCETYPE.PERSON,
   data: {game: 'nintendo'}
 }
 
 const docFour: Resource<string[]> = {
   uid: 300,
-  resourceName: 'Francis',
+  resourceName: 'clubs',
+  resourceType: RESOURCETYPE.CLUBS,
   data: ['Chelsea', 'Liverpool', 'Bayern']
 }
