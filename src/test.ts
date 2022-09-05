@@ -193,3 +193,9 @@ const docFour: Resource<string[]> = {
   resourceType: RESOURCETYPE.CLUBS,
   data: ['Chelsea', 'Liverpool', 'Bayern']
 }
+
+// Tuples
+
+const tup: [string, number, {name: string, age: number}, boolean] = ['Chelsea', 1905, {
+  name: 'Chelsea Fc', age: 117
+}, true]

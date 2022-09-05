@@ -121,3 +121,7 @@ const docFour = {
     resourceType: RESOURCETYPE.CLUBS,
     data: ['Chelsea', 'Liverpool', 'Bayern']
 };
+// Tuples
+const tup = ['Chelsea', 1905, {
+        name: 'Chelsea Fc', age: 117
+    }, true];
